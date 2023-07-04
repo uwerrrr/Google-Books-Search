@@ -1,0 +1,58 @@
+{
+  "title": "Harry Potter: Exploring Hogwarts",
+  "subtitle": "An Illustrated Guide",
+  "authors": ["Jody Revenson"],
+  "publisher": "Simon and Schuster",
+  "publishedDate": "2019-10-08",
+  "description": "Explore the iconic locations of Hogwarts as seen in the Harry Potter films with this large-scale interactive book, \u003ci\u003eHarry Potter: Exploring Hogwarts\u003c/i\u003e.\u003cbr\u003e\u003cbr\u003e\u003ci\u003eHarry Potter: Exploring Hogwarts\u003c/i\u003e\u003ci\u003e \u003c/i\u003epairs striking full-color illustrations of Hogwarts with interactive elements that reveal key movie scenes, concept art, and behind-the-scenes info on the most memorable locations within Hogwarts School of Witchcraft and Wizardry. Go behind-the-scenes with iconic landmarks like the Forbidden Forest, the Great Hall, and Quidditch Pitch, and discover secret rooms and mysteries hidden beyond the school’s surface.\u003cbr\u003e \u003cbr\u003e The first in a series of large-scale interactive books that explore the iconic locations from the films of the Wizarding World, \u003ci\u003eHarry Potter: Exploring Hogwarts\u003c/i\u003e is the perfect book for readers of all ages to connect with and rediscover the magic of Hogwarts.",
+
+  "industryIdentifiers": [
+    {
+      "type": "ISBN_10",
+      "identifier": "1683836227"
+    },
+    {
+      "type": "ISBN_13",
+      "identifier": "9781683836223"
+    }
+  ],
+  "readingModes": {
+    "text": false,
+    "image": false
+  },
+  "pageCount": 48,
+  "printedPageCount": 29,
+  "dimensions": {
+    "height": "35.60 cm",
+    "width": "25.40 cm",
+    "thickness": "1.30 cm"
+  },
+  "printType": "BOOK",
+  "categories": [
+    "Juvenile Nonfiction / Performing Arts / Film",
+    "Juvenile Nonfiction / Media Tie-In",
+    "Juvenile Nonfiction / Performing Arts / General"
+  ],
+  "averageRating": 2.5,
+  "ratingsCount": 2,
+  "maturityRating": "NOT_MATURE",
+  "allowAnonLogging": false,
+  "contentVersion": "0.1.1.0.preview.0",
+  "panelizationSummary": {
+    "containsEpubBubbles": false,
+    "containsImageBubbles": false
+  },
+
+  "imageLinks": {
+    "smallThumbnail": "http://books.google.com/books/publisher/content?id=vnbgDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71K5njdMYTggobfGNF84ugCIaulJP2XNpG3rpuLqUwTG8wgS71ePkGO7FdWAMxI25LrwDT9qlXzcVqaYDu7aJIngVjvtJq32MHXObWsR9MD85LcrPCg9ocmj3xm5jnowfmzmBAZ&source=gbs_api",
+    "thumbnail": "http://books.google.com/books/publisher/content?id=vnbgDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72kPtIdpqXMb1TKBobucH400axi2lvYLQBKqxw1trPFHa6AlFwQfNy7bH4z-4T_H8ooJEzY7Yd5NE-c2gdx0KSjDIN3RRyKFoaK9kNS68t_DCz9c31HgxU3uZ5YNfKdImcv9Cd7&source=gbs_api",
+    "small": "http://books.google.com/books/publisher/content?id=vnbgDwAAQBAJ&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE71-SXYLorfjZYD_fzB2oxL-j5WI8iOY6sDNYw3lI30hJ6McnkgMBbt9d8cIUeiujHnwaOp6Y1FUUhvaKKDgzm7Pvh6wWKQCqP5EHE4jDVALi5mqpuFMuMQrsgmJBOHxxtn9Fz8Z&source=gbs_api",
+    "medium": "http://books.google.com/books/publisher/content?id=vnbgDwAAQBAJ&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE72rx9UFHu9SIrdcCrM6D213rqDo0XP5SZ9rwscs_oHUpWBnkdMX__3_5yAgOHvLzinXxuNEvX9tCiE1Xu1aXn0NcqT7JxgNK_itk1N52atUFHO8rnMO-q5APwhJ-IjYyytBzXnN&source=gbs_api",
+    "large": "http://books.google.com/books/publisher/content?id=vnbgDwAAQBAJ&printsec=frontcover&img=1&zoom=4&edge=curl&imgtk=AFLRE73M6lR0Mc2yubTgbNoe6RUEudmXpt54qUINrDmw146voqU7pIX2BPApPI8Emfdx_naKPKPUiRE-81x6UxMS4IV8SFte4PT98fmnZRlUw1LSNBDWxl3IIW6qvN2FYzhKNTZO6Mgt&source=gbs_api",
+    "extraLarge": "http://books.google.com/books/publisher/content?id=vnbgDwAAQBAJ&printsec=frontcover&img=1&zoom=6&edge=curl&imgtk=AFLRE71P4fhCBiaUejzbEkl3fVFgTawOmHhMZ1F32IAqTznuhZN8PVQ-NwQtDy0M_3GMrfZIAt8eXvGAlkpaBOfyEHBn2wyuaaE4PKSd3tlnyGSfWqN3tlAWdxj1AoKIV3sFqk54Sat6&source=gbs_api"
+  },
+  "language": "en",
+  "previewLink": "http://books.google.com.au/books?id=vnbgDwAAQBAJ&hl=&source=gbs_api",
+  "infoLink": "https://play.google.com/store/books/details?id=vnbgDwAAQBAJ&source=gbs_api",
+  "canonicalVolumeLink": "https://play.google.com/store/books/details?id=vnbgDwAAQBAJ"
+}
