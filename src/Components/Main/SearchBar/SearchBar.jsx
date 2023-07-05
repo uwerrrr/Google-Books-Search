@@ -4,7 +4,7 @@ import { BookSearchContext } from "../../../context/BookSearchContextProvider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-const SearchBar = () => {
+const SearchBar = ({}) => {
   const { handleSearch } = useContext(BookSearchContext);
 
   const [searchInput, setSearchInput] = useState("");

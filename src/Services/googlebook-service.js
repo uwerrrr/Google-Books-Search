@@ -26,7 +26,7 @@ export const getBooksBySearchTerm = async (searchTerm = "") => {
 // let testData = getBooksBySearchTerm("harry potter");
 // testData
 //   .then((books) => {
-//     console.log(books[5]);
+//     console.log(books);
 //   })
 //   .catch((e) => {
 //     // error or rejected value

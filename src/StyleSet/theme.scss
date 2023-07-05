@@ -1,0 +1,25 @@
+// @mixin flex($direction: row, $justify: flex-start, $align: stretch) {
+//   display: flex;
+//   flex-direction: $direction;
+
+//   justify-content: $justify;
+//   align-items: $align;
+// }
+
+@mixin btn() {
+  color: #fff;
+  background-color: #007bff;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  text-decoration: none;
+
+  margin: 10px;
+  padding: 8px 12px;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}

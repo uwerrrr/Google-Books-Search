@@ -21,7 +21,7 @@ const BookLoader = () => {
 
   useEffect(() => {
     // runs when searchTerm state value is changed
-    // searchTerm is passed from SearchBar via App
+    // searchTerm is passed from SearchBar > context > BookLoader
 
     setErrMess("");
     setLoading(true);
