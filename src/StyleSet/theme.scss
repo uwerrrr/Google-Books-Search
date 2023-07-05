@@ -7,6 +7,8 @@
 // }
 
 @mixin btn() {
+  border: none;
+
   color: #fff;
   background-color: #007bff;
   transition: background-color 0.3s ease;

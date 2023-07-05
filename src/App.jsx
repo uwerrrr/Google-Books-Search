@@ -7,6 +7,7 @@ import Main from "./Components/Main/Main";
 import Footer from "./Components/Footer/Footer";
 
 import BookSearchContextProvider from "./context/BookSearchContextProvider";
+import BookModalContextProvider from "./Context/BookModalContextProvider";
 
 function App() {
   return (
@@ -14,9 +15,11 @@ function App() {
       <Header />
 
       <BookSearchContextProvider>
-        {/* context has searchTerm & its setter */}
-
-        <Main />
+        {/* { searchTerm, handleSearch } */}
+        <BookModalContextProvider>
+          {/* { bookModalOpened, openBookModal, closeBookModal } */}
+          <Main />
+        </BookModalContextProvider>
       </BookSearchContextProvider>
 
       {/* <Footer /> */}

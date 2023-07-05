@@ -1,25 +1,61 @@
 @use "../../../../../StyleSet/theme.scss";
 
+.outer {
+  padding: 5px;
+  background-color: rgb(230, 150, 45);
+  border: 4px solid black;
+}
+
 .book {
-  border: 1px solid #ccc;
-  padding: 20px;
-  // margin-bottom: 20px;
+  // border: 1px solid #ccc;
+  // padding: 10px;
+  width: 220px;
+  // min-height: 420px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: white;
+
+  // border-radius: 16px;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+  }
 
   &__img {
-    width: 200px;
-    height: auto;
+    width: 100%;
+
+    max-height: 250px;
     margin-bottom: auto;
+
+    // $border: 10px solid white;
+    // border-top: $border;
+    // border-right: $border;
+    // border-left: $border;
+
+    // border-radius: 13px 13px 0px 0px;
   }
 
   &__title {
     font-size: 18px;
     margin-bottom: 5px;
+    background-color: black;
+    color: white;
+
+    padding: 2px 6px;
   }
 
   &__author {
     font-size: 14px;
-    color: #666;
+    // color: #666;
     margin-bottom: 5px;
+    background-color: white;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
   }
 
   &__desc {
@@ -29,5 +65,11 @@
 
   &__link {
     @include theme.btn();
+  }
+  &__btn {
+    @include theme.btn();
+
+    &--view {
+    }
   }
 }
