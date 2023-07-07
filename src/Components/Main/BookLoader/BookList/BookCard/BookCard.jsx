@@ -1,8 +1,12 @@
+import { useContext, useEffect, useState } from "react";
+
 import style from "./BookCard.module.scss";
 import defaultBookImg from "../../../../../assets/default_book_cover.jpg";
+import { BookSelectedContext } from "../../../../../Context/BookSelectedContextProvider";
+import { BookModalContext } from "../../../../../Context/BookModalContextProvider";
 
 const BookCard = ({ book }) => {
-  const { title, description, imageLinks, infoLink: bookLink } = book;
+  const { title } = book;
 
   let bookImg = defaultBookImg;
   if (book.imageLinks) {
@@ -15,24 +19,25 @@ const BookCard = ({ book }) => {
   }
 
   // book.authors is Arr of Str ->
-  let authors;
+  let authors = "";
   if (book.authors) {
     authors = book.authors.join(", ");
   }
 
-  const onClick = () => {
-    console.log(title);
-  };
+  const { selectBook } = useContext(BookSelectedContext);
+  const { openBookModal } = useContext(BookModalContext);
 
-  console.log(style);
+  const onClick = () => {
+    selectBook(book);
+    openBookModal();
+    console.log(book);
+  };
 
   return (
     <div className={style.outer}>
       <div className={style.book}>
         <div className={style.book__head}>
           {<img src={bookImg} alt={title} className={style.book__img} />}
-        </div>
-        <div className={style.book__body}>
           <h4 className={style.book__title}>{title}</h4>
           <h5 className={style.book__author}>{authors}</h5>
           {/* {description && <p className={style.book__desc}>{description}</p>} */}
@@ -42,9 +47,12 @@ const BookCard = ({ book }) => {
             Google Book Link
           </button>
         </a>
-      )} */}
+      )} */}{" "}
+        </div>
+        <div className={style.book__body}>
           <button
             className={`${style["book__btn"]} ${style["book__btn--view"]} `}
+            onClick={onClick}
           >
             View more
           </button>
