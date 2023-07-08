@@ -6,22 +6,36 @@
 //   align-items: $align;
 // }
 
+$white: white;
+$lavender: #dee2ff;
+$purple: #6961d0;
+$tangerine: #f3ad87;
+$night: #0c0f0a;
+
+$borderRadiusWin: 6px;
+$borderRadiusImg: 16px;
+
 @mixin btn() {
   border: none;
 
-  color: #fff;
-  background-color: #007bff;
+  background-color: $purple;
   transition: background-color 0.3s ease;
-  font-size: 14px;
+
+  color: $white;
+  font-size: 16px;
+  font-weight: 600;
   text-decoration: none;
+  text-align: center;
+
+  width: 50%;
 
   margin: 10px;
   padding: 8px 12px;
-  border-radius: 4px;
+  border-radius: $borderRadiusWin;
 
   cursor: pointer;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: $tangerine;
   }
 }

@@ -1,53 +1,59 @@
 import { useContext, useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 import style from "./BookCard.module.scss";
 import defaultBookImg from "../../../../../assets/default_book_cover.jpg";
-import { BookSelectedContext } from "../../../../../Context/BookSelectedContextProvider";
-import { BookModalContext } from "../../../../../Context/BookModalContextProvider";
 
-const BookCard = ({ book }) => {
-  const { title } = book;
+import BookModal from "../../../BookModal/BookModal";
 
+const BookCard = ({ rawBook }) => {
+  const [showModal, setShowModal] = useState(false);
+
+  const book = {
+    title: rawBook.title,
+    infoLink: rawBook.infoLink,
+    averageRating: rawBook.averageRating ? String(rawBook.averageRating) : "",
+  };
+  console.log(book.averageRating);
+  // book image
   let bookImg = defaultBookImg;
-  if (book.imageLinks) {
-    if (book.imageLinks.small) {
-      bookImg = book.imageLinks.small;
+  if (rawBook.imageLinks) {
+    if (rawBook.imageLinks.small) {
+      bookImg = rawBook.imageLinks.small;
     }
-    if (book.imageLinks.thumbnail) {
-      bookImg = book.imageLinks.thumbnail;
+    if (rawBook.imageLinks.thumbnail) {
+      bookImg = rawBook.imageLinks.thumbnail;
     }
   }
+  book.bookImg = bookImg;
+
+  // book desc
+  book.desc = rawBook.description ? rawBook.description : "";
 
   // book.authors is Arr of Str ->
-  let authors = "";
-  if (book.authors) {
-    authors = book.authors.join(", ");
-  }
+  book.authors = rawBook.authors ? rawBook.authors.join(", ") : "";
 
-  const { selectBook } = useContext(BookSelectedContext);
-  const { openBookModal } = useContext(BookModalContext);
+  // const { selectBook } = useContext(BookSelectedContext);
+  // const { openBookModal } = useContext(BookModalContext);
 
   const onClick = () => {
-    selectBook(book);
-    openBookModal();
-    console.log(book);
+    setShowModal(true);
+    console.log("book: ", book);
   };
 
   return (
-    <div className={style.outer}>
+    <>
+      {" "}
       <div className={style.book}>
         <div className={style.book__head}>
-          {<img src={bookImg} alt={title} className={style.book__img} />}
-          <h4 className={style.book__title}>{title}</h4>
-          <h5 className={style.book__author}>{authors}</h5>
-          {/* {description && <p className={style.book__desc}>{description}</p>} */}
-          {/* {bookLink && (
-        <a href={bookLink}>
-          <button className={style.book__link} onClick={onClick}>
-            Google Book Link
-          </button>
-        </a>
-      )} */}{" "}
+          <img
+            src={book.bookImg}
+            alt={book.title}
+            className={style.book__img}
+          />
+
+          <h4 className={style.book__title}>{book.title}</h4>
+          <h5 className={style.book__author}>{book.authors}</h5>
         </div>
         <div className={style.book__body}>
           <button
@@ -58,7 +64,13 @@ const BookCard = ({ book }) => {
           </button>
         </div>
       </div>
-    </div>
+      {/* modal using  react portal */}
+      {showModal &&
+        createPortal(
+          <BookModal book={book} setShowModal={setShowModal} />,
+          document.body
+        )}
+    </>
   );
 };
 

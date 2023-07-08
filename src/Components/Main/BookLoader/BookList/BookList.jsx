@@ -7,7 +7,7 @@ const BookList = ({ books }) => {
   return (
     <section className={style.book_list}>
       {books.map((book, index) => (
-        <BookCard key={index} book={book} />
+        <BookCard key={index} rawBook={book} />
       ))}
     </section>
   );
