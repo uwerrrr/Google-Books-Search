@@ -7,8 +7,8 @@ import Main from "./Components/Main/Main";
 import Footer from "./Components/Footer/Footer";
 
 import BookSearchContextProvider from "./context/BookSearchContextProvider";
-import BookModalContextProvider from "./Context/BookModalContextProvider";
-import BookSelectedContextProvider from "./Context/BookSelectedContextProvider";
+// import BookModalContextProvider from "./Context/BookModalContextProvider";
+// import BookSelectedContextProvider from "./Context/BookSelectedContextProvider";
 
 function App() {
   return (
@@ -17,13 +17,13 @@ function App() {
 
       <BookSearchContextProvider>
         {/* { searchTerm, handleSearch } */}
-        <BookSelectedContextProvider>
+        {/* <BookSelectedContextProvider> */}
           {/* { bookSelected, selectBook } */}
-          <BookModalContextProvider>
+          {/* <BookModalContextProvider> */}
             {/* { bookModalOpened, openBookModal, closeBookModal } */}
             <Main />
-          </BookModalContextProvider>
-        </BookSelectedContextProvider>
+          {/* </BookModalContextProvider> */}
+        {/* </BookSelectedContextProvider> */}
       </BookSearchContextProvider>
 
       {/* <Footer /> */}

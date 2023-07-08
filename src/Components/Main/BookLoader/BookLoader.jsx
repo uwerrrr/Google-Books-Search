@@ -6,6 +6,8 @@ import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { BookSearchContext } from "../../../context/BookSearchContextProvider";
 import { getBooksBySearchTerm } from "../../../Services/googlebook-service.js";
 
+import style from "./BookLoader.module.scss";
+
 import BookList from "./BookList/BookList";
 
 const BookLoader = () => {
@@ -40,17 +42,19 @@ const BookLoader = () => {
   return (
     <>
       {loading && (
-        <p>
-          <FontAwesomeIcon
-            icon={faSpinner}
-            spin
-            size="lg"
-            style={{
-              "--fa-primary-color": "#002e7a",
-              "--fa-secondary-color": "#002e7a",
-            }}
-          />{" "}
-          Loading
+        <p className={style.loading}>
+          <span className={style.loading__icon}>
+            <FontAwesomeIcon
+              icon={faSpinner}
+              spin
+              size="lg"
+              style={{
+                "--fa-primary-color": "#002e7a",
+                "--fa-secondary-color": "#002e7a",
+              }}
+            />
+          </span>{" "}
+          Loading &#128034; &#128034; &#128034;
         </p>
       )}
       {!loading && errMess && <p>{errMess}</p>}

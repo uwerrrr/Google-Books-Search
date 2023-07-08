@@ -1,0 +1,9 @@
+@use "../../../StyleSet/theme.scss";
+
+.loading {
+  font-size: 25px;
+
+  &__icon {
+    color: theme.$purple;
+  }
+}

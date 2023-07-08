@@ -8,16 +8,15 @@ import { BookSearchContext } from "../../context/BookSearchContextProvider";
 import { BookModalContext } from "../../Context/BookModalContextProvider";
 
 const Main = () => {
-  const { searchTerm, handleSearch } = useContext(BookSearchContext);
-  const { bookModalOpened, openBookModal, closeBookModal } =
-    useContext(BookModalContext);
+  const { searchTerm } = useContext(BookSearchContext);
+ 
 
   return (
     <main className={style.main}>
       <SearchBar />
 
       {searchTerm && <BookLoader />}
-      {bookModalOpened && <BookModal />}
+  
     </main>
   );
 };

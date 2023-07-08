@@ -18,24 +18,29 @@ $borderRadiusImg: 16px;
 @mixin btn() {
   border: none;
 
-  background-color: $purple;
-  transition: background-color 0.3s ease;
+  // background-color: $purple;
+  background-color: $lavender;
 
-  color: $white;
+  transition: background-color 0.1s ease;
+
+  color: $purple;
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
   text-align: center;
 
+  min-width: 120px;
   width: 50%;
 
   margin: 10px;
   padding: 8px 12px;
-  border-radius: $borderRadiusWin;
+  border-radius: $borderRadiusImg;
 
   cursor: pointer;
 
   &:hover {
-    background-color: $tangerine;
+    // background-color: $tangerine;
+    background-color: $purple;
+      color: $lavender;
   }
 }
