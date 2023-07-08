@@ -13,8 +13,8 @@ const BookCard = ({ rawBook }) => {
     title: rawBook.title,
     infoLink: rawBook.infoLink,
     averageRating: rawBook.averageRating ? String(rawBook.averageRating) : "",
+    ratingsCount: rawBook.ratingsCount ? String(rawBook.ratingsCount) : "",
   };
-  console.log(book.averageRating);
   // book image
   let bookImg = defaultBookImg;
   if (rawBook.imageLinks) {
@@ -31,7 +31,7 @@ const BookCard = ({ rawBook }) => {
   book.desc = rawBook.description ? rawBook.description : "";
 
   // book.authors is Arr of Str ->
-  book.authors = rawBook.authors ? rawBook.authors.join(", ") : "";
+  book.authors = rawBook.authors ? rawBook.authors.join(" & ") : "";
 
   // const { selectBook } = useContext(BookSelectedContext);
   // const { openBookModal } = useContext(BookModalContext);

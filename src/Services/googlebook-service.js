@@ -14,11 +14,11 @@ export const getBooksBySearchTerm = async (searchTerm = "") => {
 
   const data = await response.json();
 
-  const books = data.items.map((item) => item["volumeInfo"]);
-
-  if (books.length === 0) {
+  if (data.totalItems === 0) {
     throw new Error("No books found");
   }
+
+  const books = data.items.map((item) => item["volumeInfo"]);
 
   return books;
 };

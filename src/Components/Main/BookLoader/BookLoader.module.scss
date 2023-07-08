@@ -7,3 +7,7 @@
     color: theme.$purple;
   }
 }
+
+.err {
+  @extend .loading;
+}

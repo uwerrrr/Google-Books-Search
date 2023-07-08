@@ -57,7 +57,7 @@ const BookLoader = () => {
           Loading &#128034; &#128034; &#128034;
         </p>
       )}
-      {!loading && errMess && <p>{errMess}</p>}
+      {!loading && errMess && <p className={style.err}>{errMess}</p>}
       {!loading && books.length > 0 && <BookList books={books} />}
     </>
   );

@@ -5,8 +5,18 @@ import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 
 import style from "./BookModal.module.scss";
 
+import StarRating from "./StarRating/StarRating";
+
 const BookModal = ({ book, setShowModal }) => {
-  const { title, infoLink, desc, authors, bookImg, averageRating } = book;
+  const {
+    title,
+    infoLink,
+    desc,
+    authors,
+    bookImg,
+    averageRating,
+    ratingsCount,
+  } = book;
 
   return (
     <div className={style.modal_background}>
@@ -27,10 +37,14 @@ const BookModal = ({ book, setShowModal }) => {
           <div className={style.content_sec}>
             <div className={style.content_sec__content}>
               <h2 className={style.title}>{title}</h2>
-              <h3 className={style.author}>{authors}</h3>
-              <p className={style.rating}>
-                {averageRating ? `Rating: ${averageRating}` : "No rating"}
-              </p>
+              <h3 className={style.authors}>{authors}</h3>
+             
+              {averageRating ? (
+                <StarRating rating={averageRating} />
+              ) : (
+                <p>"No rating"</p>
+              )}
+              {averageRating && <p>({ratingsCount} reviews)</p>}
               <p className={style.desc}>{desc}</p>
             </div>
             <div className={style.content_sec__footer}>
