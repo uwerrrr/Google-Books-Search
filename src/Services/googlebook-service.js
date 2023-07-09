@@ -9,13 +9,13 @@ export const getBooksBySearchTerm = async (searchTerm = "") => {
     `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&key=${APIKey}`
   );
   if (!response.ok) {
-    throw new Error("Failed to fetch books");
+    throw new Error("Can not connect to Google Books!");
   }
 
   const data = await response.json();
 
   if (data.totalItems === 0) {
-    throw new Error("No books found");
+    throw new Error("No books found !");
   }
 
   const books = data.items.map((item) => item["volumeInfo"]);
