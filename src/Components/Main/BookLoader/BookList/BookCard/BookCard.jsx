@@ -34,18 +34,27 @@ const BookCard = ({ rawBook }) => {
   book.authors = rawBook.authors ? rawBook.authors.join(" & ") : "";
 
   // industryIdentifiers - ISBN
-  if (rawBook.industryIdentifiers[0].type === "ISBN_13") {
-    book.industryIdentifiers =
-      rawBook.industryIdentifiers[0].identifier +
-      " , " +
-      rawBook.industryIdentifiers[1].identifier;
+  if (rawBook.industryIdentifiers.length === 2) {
+    if (rawBook.industryIdentifiers[0].type === "ISBN_13") {
+      book.industryIdentifiers =
+        "ISBN: " +
+        rawBook.industryIdentifiers[0].identifier +
+        ", " +
+        rawBook.industryIdentifiers[1].identifier;
+    } else {
+      book.industryIdentifiers =
+        "ISBN: " +
+        rawBook.industryIdentifiers[1].identifier +
+        " , " +
+        rawBook.industryIdentifiers[0].identifier;
+    }
   } else {
-    book.industryIdentifiers =
-      rawBook.industryIdentifiers[1].identifier +
-      " , " +
-      rawBook.industryIdentifiers[0].identifier;
+    book.industryIdentifiers = rawBook.industryIdentifiers[0].identifier
+      .split(":")
+      .join(": ");
   }
-  console.log("industryIdentifiers: ", book.industryIdentifiers);
+
+  console.log("book.industryIdentifiers: ", book.industryIdentifiers);
 
   const onClick = () => {
     setShowModal(true);
