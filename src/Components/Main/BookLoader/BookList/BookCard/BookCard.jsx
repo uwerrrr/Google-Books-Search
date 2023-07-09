@@ -34,7 +34,8 @@ const BookCard = ({ rawBook }) => {
   book.authors = rawBook.authors ? rawBook.authors.join(" & ") : "";
 
   // industryIdentifiers - ISBN
-  if (rawBook.industryIdentifiers.length === 2) {
+
+  if (rawBook.industryIdentifiers && rawBook.industryIdentifiers.length === 2) {
     if (rawBook.industryIdentifiers[0].type === "ISBN_13") {
       book.industryIdentifiers =
         "ISBN: " +
@@ -48,13 +49,16 @@ const BookCard = ({ rawBook }) => {
         " , " +
         rawBook.industryIdentifiers[0].identifier;
     }
-  } else {
+  } else if (
+    rawBook.industryIdentifiers &&
+    rawBook.industryIdentifiers.length === 1
+  ) {
     book.industryIdentifiers = rawBook.industryIdentifiers[0].identifier
       .split(":")
       .join(": ");
+  } else {
+    book.industryIdentifiers = "";
   }
-
-  console.log("book.industryIdentifiers: ", book.industryIdentifiers);
 
   const onClick = () => {
     setShowModal(true);
