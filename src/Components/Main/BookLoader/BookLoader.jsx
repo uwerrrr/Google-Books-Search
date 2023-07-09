@@ -32,7 +32,7 @@ const BookLoader = () => {
     getBooksBySearchTerm(searchTerm)
       .then((books) => setBooks(books))
       .catch((error) => {
-        console.error(error);
+        // console.error(error);
 
         setErrMess(error.message);
       })
