@@ -14,7 +14,9 @@
 }
 .modal {
   max-width: 80%;
+  min-width: 50%;
   max-height: 90%;
+  min-height: 50%;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -22,10 +24,13 @@
   border-radius: theme.$borderRadiusWin;
   overflow: auto;
 
+
   &__body {
     display: flex;
     gap: 15px;
     margin: 0px 15px 15px 15px;
+
+    
 
     .img_sec {
       min-width: 40%;
@@ -75,14 +80,16 @@
 
 @media (max-width: 768px) {
   .modal {
-    max-width: 95%;
+    width: 95%;
     &__body {
       flex-direction: column;
       .img_sec {
         height: 40vh;
+        width: 100%;
         .img_sec__img {
           height: 100%;
           width: auto;
+          max-width: 90%;
         }
       }
     }

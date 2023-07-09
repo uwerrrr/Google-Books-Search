@@ -16,6 +16,7 @@ const BookModal = ({ book, setShowModal }) => {
     bookImg,
     averageRating,
     ratingsCount,
+    industryIdentifiers,
   } = book;
 
   return (
@@ -38,7 +39,7 @@ const BookModal = ({ book, setShowModal }) => {
             <div className={style.content_sec__content}>
               <h2 className={style.title}>{title}</h2>
               <h3 className={style.authors}>{authors}</h3>
-             
+
               {averageRating ? (
                 <StarRating rating={averageRating} />
               ) : (

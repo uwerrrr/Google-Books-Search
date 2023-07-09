@@ -33,8 +33,19 @@ const BookCard = ({ rawBook }) => {
   // book.authors is Arr of Str ->
   book.authors = rawBook.authors ? rawBook.authors.join(" & ") : "";
 
-  // const { selectBook } = useContext(BookSelectedContext);
-  // const { openBookModal } = useContext(BookModalContext);
+  // industryIdentifiers - ISBN
+  if (rawBook.industryIdentifiers[0].type === "ISBN_13") {
+    book.industryIdentifiers =
+      rawBook.industryIdentifiers[0].identifier +
+      " , " +
+      rawBook.industryIdentifiers[1].identifier;
+  } else {
+    book.industryIdentifiers =
+      rawBook.industryIdentifiers[1].identifier +
+      " , " +
+      rawBook.industryIdentifiers[0].identifier;
+  }
+  console.log("industryIdentifiers: ", book.industryIdentifiers);
 
   const onClick = () => {
     setShowModal(true);
