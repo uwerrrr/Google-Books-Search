@@ -42,7 +42,7 @@ const BookModal = ({ book, setShowModal }) => {
               {averageRating ? (
                 <StarRating rating={averageRating} />
               ) : (
-                <p>"No rating"</p>
+                <p>No rating</p>
               )}
               {averageRating && <p>({ratingsCount} reviews)</p>}
               <p className={style.desc}>{desc}</p>

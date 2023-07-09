@@ -24,10 +24,7 @@
 
   &__body {
     display: flex;
-    // flex-direction: row;
     gap: 15px;
-    // height: 100%;
-    // width: 100%;
     margin: 0px 15px 15px 15px;
 
     .img_sec {
@@ -72,6 +69,22 @@
   }
 }
 
-.authors{
- color: theme.$purple;
+.authors {
+  color: theme.$purple;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    max-width: 95%;
+    &__body {
+      flex-direction: column;
+      .img_sec {
+        height: 40vh;
+        .img_sec__img {
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+  }
 }
