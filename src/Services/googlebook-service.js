@@ -9,16 +9,16 @@ export const getBooksBySearchTerm = async (searchTerm = "") => {
     `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&key=${APIKey}`
   );
   if (!response.ok) {
-    throw new Error("Failed to fetch books");
+    throw new Error("Can not connect to Google Books!");
   }
 
   const data = await response.json();
 
-  const books = data.items.map((item) => item["volumeInfo"]);
-
-  if (books.length === 0) {
-    throw new Error("No books found");
+  if (data.totalItems === 0) {
+    throw new Error("No books found !");
   }
+
+  const books = data.items.map((item) => item["volumeInfo"]);
 
   return books;
 };
@@ -26,7 +26,7 @@ export const getBooksBySearchTerm = async (searchTerm = "") => {
 // let testData = getBooksBySearchTerm("harry potter");
 // testData
 //   .then((books) => {
-//     console.log(books[5]);
+//     console.log(books);
 //   })
 //   .catch((e) => {
 //     // error or rejected value

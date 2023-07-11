@@ -1,11 +1,19 @@
+@use "./StyleSet/theme.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&family=Source+Code+Pro:ital,wght@0,200;1,200;1,500&display=swap");
+
 body {
-  max-width: 80%;
-  min-height: 100vh;
+  max-width: 90%;
+  // min-height: 100%;
   margin: 0 auto;
+  color: theme.$night;
+  // background-color: theme.$tangerine;
+
+  // font-family: "Nunito Sans", sans-serif;
 }
 #root {
-  // margin: 0 auto;
-  // padding: 2rem;
+  margin: 0 auto;
+  padding: 0;
   text-align: center;
   min-height: 100vh;
 }

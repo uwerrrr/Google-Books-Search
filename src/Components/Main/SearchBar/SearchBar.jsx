@@ -4,7 +4,9 @@ import { BookSearchContext } from "../../../context/BookSearchContextProvider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-const SearchBar = () => {
+import style from "./SearchBar.module.scss";
+
+const SearchBar = ({}) => {
   const { handleSearch } = useContext(BookSearchContext);
 
   const [searchInput, setSearchInput] = useState("");
@@ -19,10 +21,21 @@ const SearchBar = () => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <input type="text" required value={searchInput} onChange={onChange} />
-      <button>
-        <FontAwesomeIcon icon={faMagnifyingGlass} /> Search
+    <form className={style[`search-form`]} onSubmit={onSubmit}>
+      <input
+        className={style[`search-form__input`]}
+        type={"text"}
+        required
+        value={searchInput}
+        onChange={onChange}
+        placeholder="search for any book"
+      />
+      <button className={style[`search-form__button`]}>
+        <FontAwesomeIcon
+          icon={faMagnifyingGlass}
+          className={style[`search-form__icon`]}
+        />
+        Search
       </button>
     </form>
   );
