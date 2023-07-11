@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useState } from "react";
 import { createPortal } from "react-dom";
 
 import style from "./BookCard.module.scss";

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 import { BookSearchContext } from "../../../context/BookSearchContextProvider";
-import { getBooksBySearchTerm } from "../../../Services/googlebook-service.js";
+import { getBooksBySearchTerm } from "../../../services/googlebook-service.js";
 
 import style from "./BookLoader.module.scss";
 
