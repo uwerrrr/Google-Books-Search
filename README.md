@@ -1,7 +1,7 @@
 # Google Books Search Engine
 
 A book search engine using the Google Books API.
- Demonstrating React implementation to make an interactive website, API integration and error handling.
+             Demonstrating React implementation to make an interactive website, API integration and error handling.
 
 Made by _**Oscar NGUYEN**_.
 
