@@ -67,7 +67,6 @@ const BookCard = ({ rawBook }) => {
 
   return (
     <>
-      {" "}
       <div className={style.book}>
         <div className={style.book__head}>
           <img
